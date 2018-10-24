@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 
 def grade(grd):
-	dictt = {'A':10,'A-':9,'B':8,'B-':7,'C':6,'C-':5,'D':4,'E':2}
+	dictt = {'O':10,'A+':9,'A':8,'B':7,'B-':6,'C':5,'D':4,'E':2}
 	return dictt[grd]
 
 def calc_CG(event):
@@ -19,7 +19,7 @@ def calc_CG(event):
 		emoji = "(̿▀̿‿ ̿▀̿ ̿)"
 	messagebox.showinfo(emoji, str(gradess_this_sem)+" CGPA")	
 
-top = tkinter.Tk()
+top = Tk()
 top.title("THE GREAT CGPA CALCUATOR")
 top.configure(background="black")
 
@@ -44,7 +44,7 @@ for i in range (6):
 			creditss_list.append(Spinbox(frame_2,values=(1,2,3,4,5,20)))
 			creditss_list[i].grid(row = i+1,column = 0,padx=10,pady=10)
 				
-			grades_list.append(Spinbox(frame_2,values = ("E","D","C-","B-","B","C-","A-","A")))
+			grades_list.append(Spinbox(frame_2,values = ("E","D","C","B-","B","A","A+","O")))
 			grades_list[i].grid(row = i+1,column=1,padx=10,pady=10)
 			
 btn_calcCG = Button(text="! Press with Caution !", bg="red", fg="white")
