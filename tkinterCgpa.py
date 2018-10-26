@@ -2,10 +2,10 @@ from tkinter import *
 from tkinter import messagebox
 
 def grade(grd):
-	dictt = {'O':10,'A+':9,'A':8,'B':7,'B-':6,'C':5,'D':4,'E':2}
+	dictio = {'O':10,'A+':9,'A':8,'B':7,'B-':6,'C':5,'D':4,'E':2}
 	return dictt[grd]
 
-def calc_CG(event):
+def magicFunc(event):
 	print ("Calculating !")
 	gradess_this_sem = 0
 	creditss_this_sem = 0
@@ -48,7 +48,7 @@ for i in range (6):
 			grades_list[i].grid(row = i+1,column=1,padx=10,pady=10)
 			
 btn_calcCG = Button(text="! Press with Caution !", bg="red", fg="white")
-btn_calcCG.bind("<Button-1>",calc_CG)
+btn_calcCG.bind("<Button-1>",magicFunc)
 btn_calcCG.pack(pady=8)
 
 top.mainloop()
