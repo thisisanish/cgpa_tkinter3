@@ -7,17 +7,18 @@ def grade(grd):
 
 def magicFunc(event):
 	print ("Calculating !")
-	gradess_this_sem = 0
-	creditss_this_sem = 0
+	gradess_second_sem = 0
+	creditss_second_sem = 0
+	gradess_first_sem = 0
+	creditss_first_sem = 0
 	for j in range (6):
-		gradess_this_sem = gradess_this_sem + int(creditss_list[j].get())*(grade(grades_list[j].get()))
-		creditss_this_sem = creditss_this_sem + int(creditss_list[j].get())
-	gradess_first_sem = round(gradess_this_sem/creditss_this_sem,2)
-	print(gradess_this_sem)
+		gradess_first_sem = gradess_first_sem + int(creditss_list[j].get())*(grade(grades_list[j].get()))
+		creditss_first_sem = creditss_first_sem + int(creditss_list[j].get())
+	gradess_first_sem = round(gradess_first_sem/creditss_first_sem,2)
 	for j in range (6, 12):
-		gradess_this_sem = gradess_this_sem + int(creditss_list[j].get())*(grade(grades_list[j].get()))
-		creditss_this_sem = creditss_this_sem + int(creditss_list[j].get())
-	gradess_second_sem = round(gradess_this_sem/creditss_this_sem,2)
+		gradess_second_sem = gradess_second_sem + int(creditss_list[j].get())*(grade(grades_list[j].get()))
+		creditss_second_sem = creditss_second_sem + int(creditss_list[j].get())
+	gradess_second_sem = round(gradess_second_sem/creditss_second_sem,2)
 
 	gradess_this_year = round((gradess_first_sem+gradess_second_sem)/2,2)
 
